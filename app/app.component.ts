@@ -6,7 +6,13 @@ import {Animal} from './animal.model';
   template: `
   <div class="container">
       <h1>Local Zoo</h1>
-      <animal-list [animals]="animals"></animal-list>
+      <hr>
+      <div class="half left">
+        <animal-list [animals]="animals" (detailsSender)="viewDetails($event)"></animal-list>
+      </div>
+      <div class="half right">
+        <animal-detail [selectedAnimal]="selectedAnimal"></animal-detail>
+      </div>
   </div>
   `
 })
@@ -17,4 +23,9 @@ export class AppComponent {
     new Animal("Ocelot", "Prince", 4, "Carnivore", "Tropical Rain Forest Building", 6, "Male", "Laying in the sunshine", "Toys that are not rope-based"),
     new Animal("Northwest Black Tailed Deer", "Tinkerbell", 8, "Herbivore", "Northern Trail", 2, "Female", "Delicate roots and leaves", "Loud noises")
   ]
+  selectedAnimal = null;
+
+  viewDetails(animal: Animal) {
+    this.selectedAnimal = animal;
+  }
 }

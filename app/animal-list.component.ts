@@ -5,12 +5,20 @@ import {Animal} from './animal.model';
   selector: 'animal-list',
   template: `
   <div>
-    <p *ngFor="let animal of animals">{{animal.name}} the {{animal.species}}</p>
+    <div class="panel panel-default" *ngFor="let animal of animals">
+      <div (click)="viewDetails(animal)" class="panel-heading">{{animal.name}} the {{animal.species}}
+      </div>
+    </div>
   </div>
   `
 })
 
 export class AnimalListComponent {
   @Input() animals: Animal[];
-  
+  @Output() detailsSender = new EventEmitter();
+
+  viewDetails(animal: Animal) {
+    this.detailsSender.emit(animal);
+  }
+
 }

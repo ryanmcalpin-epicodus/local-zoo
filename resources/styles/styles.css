@@ -1,0 +1,17 @@
+.half {
+  width: 48%;
+  margin-right: 0px !important;
+  display: inline;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+#details {
+  font-size: 18px;
+}
