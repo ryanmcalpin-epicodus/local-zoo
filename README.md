@@ -1,6 +1,7 @@
 # Local Zoo
 Ryan McAlpin, Epicodus 5/5/17
 <hr>
+
 ## Description
 This is a website designed to track individual animals at a specific zoo. Users (zoo staff) can view a list of all the animals, admit new animals, edit an animal's info, and remove an animal. Users can also view a list filtered by age and maturity (based on species).
 
