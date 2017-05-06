@@ -5,14 +5,16 @@ import {Animal} from './animal.model';
   selector: 'app-root',
   template: `
   <div class="container">
-      <h1>Local Zoo</h1>
-      <hr>
-      <div class="half left">
-        <animal-list [animals]="animals" (detailsSender)="viewDetails($event)"></animal-list>
-      </div>
-      <div class="half right">
-        <animal-detail [selectedAnimal]="selectedAnimal"></animal-detail>
-      </div>
+    <button (click)="clickNew()" id="add-butt" class="btn-lg right">NEW ANIMAL</button>
+    <h1>Local Zoo</h1>
+    <hr>
+    <div class="half left">
+      <animal-list [animals]="animals" (detailsSender)="viewDetails($event)"></animal-list>
+    </div>
+    <div class="half right">
+      <animal-detail [selectedAnimal]="selectedAnimal"></animal-detail>
+      <new-animal [showFormNewAnimal]="showFormNewAnimal" (newAnimalSender)="saveNewAnimal($event)"></new-animal>
+    </div>
   </div>
   `
 })
@@ -24,8 +26,21 @@ export class AppComponent {
     new Animal("Northwest Black Tailed Deer", "Tinkerbell", 8, "Herbivore", "Northern Trail", 2, "Female", "Delicate roots and leaves", "Loud noises")
   ]
   selectedAnimal = null;
+  showFormNewAnimal: boolean = false;
 
   viewDetails(animal: Animal) {
+    this.showFormNewAnimal = false;
+    this.selectedAnimal = animal;
+  }
+
+  clickNew() {
+    this.selectedAnimal = null;
+    this.showFormNewAnimal = true;
+  }
+
+  saveNewAnimal(animal: Animal) {
+    this.animals.push(animal);
+    this.showFormNewAnimal = false;
     this.selectedAnimal = animal;
   }
 }

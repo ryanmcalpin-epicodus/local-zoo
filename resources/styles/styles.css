@@ -12,6 +12,44 @@
   float: left;
 }
 
-#details {
+.details {
   font-size: 18px;
+  /*width: fill;*/
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+input::placeholder {
+  /*color: black;*/
+}
+
+input:focus::-webkit-input-placeholder {
+  color:transparent;
+}
+input:focus:-moz-placeholder {
+  color:transparent;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.animal-list-item:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+#add-butt {
+  margin-top: 16px;
+}
+
+#submit-butt-div {
+  text-align: center;
+}
+
+#submit-butt {
+  width: 100%;
 }

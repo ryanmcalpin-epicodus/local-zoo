@@ -6,7 +6,7 @@ import {Animal} from './animal.model';
   template: `
   <div *ngIf="selectedAnimal">
     <div class="panel panel-default">
-      <div class="panel-body" id="details">
+      <div class="panel-body details">
         <p>Name: {{selectedAnimal.name}}</p>
         <p>Species: {{selectedAnimal.species}}</p>
         <p>Age: {{selectedAnimal.age}}</p>

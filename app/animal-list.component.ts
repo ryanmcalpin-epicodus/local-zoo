@@ -6,7 +6,8 @@ import {Animal} from './animal.model';
   template: `
   <div>
     <div class="panel panel-default" *ngFor="let animal of animals">
-      <div (click)="viewDetails(animal)" class="panel-heading">{{animal.name}} the {{animal.species}}
+      <div (click)="viewDetails(animal)" class="panel-body animal-list-item">
+      {{animal.name}} the {{animal.species}}
       </div>
     </div>
   </div>
