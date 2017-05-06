@@ -17,7 +17,7 @@ import {Animal} from './animal.model';
         <input #likes class="form-control" placeholder="LIKES">
         <input #dislikes class="form-control" placeholder="DISLIKES">
         <div id="submit-butt-div">
-          <button (click)="clickSubmit(name.value, species.value, age.value, diet.value, caretakers.value, sex.value, likes.value, dislikes.value)" class="btn-lg" id="submit-butt">SUBMIT</button>
+          <button (click)="clickSubmit(name.value, species.value, age.value, diet.value, location.value, caretakers.value, sex.value, likes.value, dislikes.value)" class="btn-lg" id="submit-butt">SUBMIT</button>
         </div>
       </div>
     </div>

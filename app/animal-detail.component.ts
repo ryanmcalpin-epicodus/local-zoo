@@ -11,6 +11,7 @@ import {Animal} from './animal.model';
         <p>Species: {{selectedAnimal.species}}</p>
         <p>Age: {{selectedAnimal.age}}</p>
         <p>Diet: {{selectedAnimal.diet}}</p>
+        <p>Location: {{selectedAnimal.location}}</p>
         <p>Caretakers: {{selectedAnimal.caretakers}}</p>
         <p>Sex: {{selectedAnimal.sex}}</p>
         <p>Likes: {{selectedAnimal.likes}}</p>
