@@ -57,6 +57,7 @@ button:focus {
 #animals-title {
   margin-top: 0px;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 #list-div {
@@ -67,9 +68,30 @@ button:focus {
   margin: 5px 0px 5px 0px !important;
 }
 
-.sort-span:hover {
+.sort-div {
+  margin-right: 25px;
+  margin-left: 25px;
+
+}
+
+.sort-div:hover {
   color: white;
   background-color: black;
   cursor: pointer;
-  padding: 8px;
+  padding: 5px;
+  margin-right: 17px;
+  margin-left: 17px;
+}
+
+.sort-div-selected {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  padding: 5px;
+  margin-right: 17px;
+  margin-left: 17px;
+}
+
+#sort-bar {
+  text-align: center;
 }

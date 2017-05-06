@@ -16,6 +16,13 @@ export class AgePipe implements PipeTransform {
         }
       });
       return output;
+    } else if (filterBy==='old') {
+      input.forEach(function(e) {
+        if (e.age > 2) {
+          output.push(e);
+        }
+      });
+      return output;
     } else {
       return input;
     }
