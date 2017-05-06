@@ -27,7 +27,7 @@ export class AnimalListComponent {
   @Output() detailsSender = new EventEmitter();
 
   filterBy: string = null;
-  sortStyleAll: string = "sort-div"
+  sortStyleAll: string = "sort-div-selected"
   sortStyleAdults: string = "sort-div"
   sortStyleBabies: string = "sort-div"
 

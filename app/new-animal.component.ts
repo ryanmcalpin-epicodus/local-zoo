@@ -7,6 +7,7 @@ import {Animal} from './animal.model';
   <div *ngIf="showFormNewAnimal">
     <div class="panel panel-default">
       <div class="panel-body details">
+        <h3 class="form-title">New Animal</h3>
         <input #name class="form-control" placeholder="NAME">
         <input #species class="form-control" placeholder="SPECIES">
         <input #age type="number" min="0" class="form-control" placeholder="AGE">
@@ -17,7 +18,7 @@ import {Animal} from './animal.model';
         <input #likes class="form-control" placeholder="LIKES">
         <input #dislikes class="form-control" placeholder="DISLIKES">
         <div id="submit-butt-div">
-          <button (click)="clickSubmit(name.value, species.value, age.value, diet.value, location.value, caretakers.value, sex.value, likes.value, dislikes.value)" class="btn-lg" id="submit-butt">SUBMIT</button>
+          <button (click)="clickSubmit(name.value, species.value, age.value, diet.value, location.value, caretakers.value, sex.value, likes.value, dislikes.value)" class="btn-lg submit-butt">SUBMIT</button>
         </div>
       </div>
     </div>

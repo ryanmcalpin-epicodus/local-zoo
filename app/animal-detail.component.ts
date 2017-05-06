@@ -1,12 +1,15 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {Animal} from './animal.model';
 
 @Component({
   selector: 'animal-detail',
   template: `
-  <div *ngIf="selectedAnimal">
+  <div *ngIf="showAnimalDetails">
     <div class="panel panel-default">
       <div class="panel-body details">
+        <button (click)="clickEdit(selectedAnimal)" id="edit-butt" class="btn-sm right">EDIT</button>
+        <h3 class="form-title">Animal Details</h3>
+        <hr class="line">
         <p>Name: {{selectedAnimal.name}}</p>
         <p>Species: {{selectedAnimal.species}}</p>
         <p>Age: {{selectedAnimal.age}}</p>
@@ -24,4 +27,10 @@ import {Animal} from './animal.model';
 
 export class AnimalDetailComponent {
   @Input() selectedAnimal: Animal;
+  @Input() showAnimalDetails: boolean;
+  @Output() editSender = new EventEmitter();
+
+  clickEdit(animal: Animal) {
+    this.editSender.emit(animal);
+  }
 }
