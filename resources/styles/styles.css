@@ -53,3 +53,23 @@ button:focus {
 #submit-butt {
   width: 100%;
 }
+
+#animals-title {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+#list-div {
+  margin-top: 20px;
+}
+
+.line {
+  margin: 5px 0px 5px 0px !important;
+}
+
+.sort-span:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  padding: 8px;
+}
