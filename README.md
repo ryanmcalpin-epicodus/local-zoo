@@ -22,7 +22,10 @@ This is a website designed to track individual animals at a specific zoo. Users 
 * localhost:3000 should open in the browser
 
 ## Improvements
-
+* Zoo details panel showing total animals, different species, staff, etc.
+* Age sorting takes into account different ages of maturity for different species
+* Map of zoo showing the location of each animal
+* More stylish UI
 
 ## Legal
 Copyright (c) 2017 Copyright Ryan McAlpin, All Rights Reserved.<br/>
